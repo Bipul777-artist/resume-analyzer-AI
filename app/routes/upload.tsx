@@ -5,7 +5,9 @@ import Navbar from "~/components/Navbar";
 import { usePuterStore } from "~/lib/puter";
 import {convertPdfToImage} from '~/lib/pdf2img';
 import { generateUUID } from "~/lib/utils";
-import { prepareInstructions } from "constants";
+// import { prepareInstructions } from "constants";
+import { prepareInstructions } from "constants/index";
+import { AIResponseFormat } from "constants/index";
 
 const Upload = () => {
 
@@ -49,9 +51,15 @@ const Upload = () => {
         await kv.set(`resume:${uuid}`, JSON.stringify(data));
         setStatusText('Analyzing......')
 
+        const instructions = prepareInstructions({
+            jobTitle,
+            jobDescription,
+            AIResponseFormat,
+        });
+
         const feedback = await ai.feedback(
             uploadedFile.path,
-            prepareInstructions({jobTitle, jobDescription})
+            instructions
         )
     
         if (!feedback) return setStatusText('Error: Failed to analyze resume')
