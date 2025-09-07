@@ -1,87 +1,151 @@
-# Welcome to React Router!
+# 🚀 AI Resume Reviewer
 
-A modern, production-ready template for building full-stack React applications using React Router.
+An intelligent resume analysis tool powered by AI that provides comprehensive feedback to help job seekers optimize their resumes for better ATS compatibility and overall effectiveness.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## ✨ Features
 
-## Features
+- **📄 PDF Resume Upload & Analysis** - Upload your resume in PDF format for instant AI-powered analysis
+- **🎯 Job-Specific Feedback** - Input job title and description for targeted, role-specific recommendations
+- **🤖 ATS Compatibility Scoring** - Get detailed ATS (Applicant Tracking System) compatibility scores and tips
+- **📊 Comprehensive Analysis** - Receive feedback across multiple dimensions:
+  - **Tone & Style** - Professional language and communication effectiveness
+  - **Content Quality** - Relevance, impact, and completeness of information
+  - **Structure & Format** - Resume organization and visual hierarchy
+  - **Skills Assessment** - Technical and soft skills presentation
+- **🖼️ PDF to Image Conversion** - Advanced document processing for better analysis
+- **💯 Scoring System** - Get numerical scores (0-100) for each category with actionable improvement tips
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🛠️ Tech Stack
 
-## Getting Started
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Build Tool**: Vite
+- **Backend Services**: Puter (Database, Storage, AI Models)
+- **AI Model**: GPT-4o for resume analysis
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
 
 ### Installation
 
-Install the dependencies:
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd ai-resume-reviewer
+   ```
 
-```bash
-npm install
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to start using the application.
+
+## 🎯 How to Use
+
+1. **Upload Your Resume**: Click the upload area and select your PDF resume file
+2. **Add Job Details** (Optional): Enter the company name, job title, and job description for more targeted feedback
+3. **Analyze**: Click the "Analyze Resume" button to start the AI analysis
+4. **Review Feedback**: Get comprehensive scores and actionable tips across all categories
+5. **Improve**: Implement the suggestions and re-analyze for better scores
+
+## 📊 Analysis Categories
+
+### ATS Compatibility
+- Keyword optimization
+- Format compatibility
+- Section organization
+- File structure
+
+### Tone & Style
+- Professional language use
+- Clarity and conciseness
+- Industry-appropriate terminology
+- Communication effectiveness
+
+### Content Quality
+- Work experience relevance
+- Achievement quantification
+- Skills alignment
+- Educational background
+
+### Structure & Format
+- Visual hierarchy
+- Section organization
+- White space usage
+- Readability
+
+### Skills Assessment
+- Technical skills presentation
+- Soft skills demonstration
+- Skill-job alignment
+- Competency levels
+
+## 🏗️ Project Structure
+
+```
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Main application pages
+│   ├── utils/          # Helper functions and utilities
+│   ├── types/          # TypeScript type definitions
+│   └── styles/         # Global styles and Tailwind config
+├── public/             # Static assets
+└── package.json        # Project dependencies and scripts
 ```
 
-### Development
+## 🤖 AI Analysis Process
 
-Start the development server with HMR:
+1. **Document Processing**: PDF is converted to image format for better AI comprehension
+2. **Content Extraction**: AI extracts and analyzes text, formatting, and structure
+3. **Job Matching**: When job description is provided, analysis is tailored to specific role requirements
+4. **Scoring Algorithm**: Each category is scored based on industry best practices and ATS requirements
+5. **Feedback Generation**: Actionable tips are generated with specific improvement recommendations
 
-```bash
-npm run dev
-```
+## 📈 Scoring System
 
-Your application will be available at `http://localhost:5173`.
+- **0-40**: Needs Significant Improvement
+- **41-60**: Below Average - Multiple Areas Need Work
+- **61-75**: Good - Minor Improvements Needed
+- **76-85**: Very Good - Well-Optimized Resume
+- **86-100**: Excellent - ATS and Recruiter Ready
 
-## Building for Production
+## 🚀 Available Scripts
 
-Create a production build:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm run lint` - Run ESLint for code quality
 
-```bash
-npm run build
-```
+## 🤝 Contributing
 
-## Deployment
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-### Docker Deployment
+## 📝 License
 
-To build and run using Docker:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-```bash
-docker build -t my-app .
+## 🙏 Acknowledgments
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- Powered by Puter for seamless backend services
+- AI analysis provided by GPT-4o
+- Built with modern React and TypeScript best practices
 
 ---
 
-Built with ❤️ using React Router.
+**Ready to optimize your resume?** Upload your PDF and get AI-powered feedback in seconds! 🎯
